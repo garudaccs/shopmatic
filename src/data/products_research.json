@@ -1,0 +1,652 @@
+[
+  {
+    "slug": "perplexity",
+    "name": "Perplexity AI",
+    "tagline": "AI-powered search engine with real-time answers",
+    "description": "Perplexity AI is an AI-powered search engine that provides direct, cited answers to user queries in real-time. It combines the power of large language models with live web search to deliver accurate, source-backed responses. The platform is designed for researchers, professionals, and curious individuals seeking instant knowledge without browsing multiple pages.",
+    "features": [
+      "Real-time web search with citations",
+      "Follow-up question threading",
+      "Multiple AI model support (Claude, GPT-4, Gemini)",
+      "Image search and analysis",
+      "Academic research mode",
+      "Collection and document creation",
+      "Browser extension integration",
+      "API access for developers"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$20/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Pro", "price": "$20/mo"},
+        {"name": "Enterprise", "price": "$40/user/mo"}
+      ]
+    },
+    "target_audience": "Researchers, students, professionals, content creators, and anyone needing instant, accurate information",
+    "seo_keywords": ["Perplexity AI review", "Perplexity Pro vs free", "AI search engine", "Perplexity alternatives", "Perplexity pricing"],
+    "competitors": ["ChatGPT", "Google AI Overview", "You.com"],
+    "usp": "Real-time cited answers with source transparency, avoiding the need to browse multiple pages",
+    "category": "AI Tools",
+    "affiliate_url": "https://l-nk.in/perplexity",
+    "rating": 4.6
+  },
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "tagline": "AI voice generation and text-to-speech platform",
+    "description": "ElevenLabs is an advanced AI voice generation platform that creates realistic, expressive synthetic voices from text. It offers industry-leading voice cloning, multilingual text-to-speech, and voice design capabilities. The platform is trusted by content creators, publishers, and enterprises for creating engaging audio content.",
+    "features": [
+      "Text-to-speech with natural voices",
+      "Voice cloning from samples",
+      "AI dubbing in 30+ languages",
+      "Voice design with custom parameters",
+      "Emotional speech synthesis",
+      "API access for developers",
+      "Audio Native for long-form content",
+      "Sound Effects generation"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$6/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Starter", "price": "$6/mo"},
+        {"name": "Creator", "price": "$22/mo"},
+        {"name": "Pro", "price": "$99/mo"},
+        {"name": "Scale", "price": "$299/mo"}
+      ]
+    },
+    "target_audience": "Content creators, video producers, game developers, audiobook publishers, and enterprises needing AI voice solutions",
+    "seo_keywords": ["ElevenLabs review", "AI voice generator", "text to speech AI", "ElevenLabs pricing", "voice cloning software"],
+    "competitors": ["Murf.ai", "Play.ht", "Resemble.ai"],
+    "usp": "Industry-leading voice quality with emotional range and multilingual capabilities",
+    "category": "AI Tools",
+    "affiliate_url": "https://l-nk.in/elevenlabs",
+    "rating": 4.7
+  },
+  {
+    "slug": "windsurf",
+    "name": "Windsurf (Codeium)",
+    "tagline": "AI-powered code editor with intelligent coding assistant",
+    "description": "Windsurf is an AI-powered code editor by Codeium that brings intelligent coding assistance to developers. It features Cascade, an AI agent that understands context and assists throughout the development lifecycle. The editor combines traditional IDE features with cutting-edge AI capabilities for faster, more efficient coding.",
+    "features": [
+      "AI autocomplete and code suggestions",
+      "Cascade AI agent for multi-step tasks",
+      "Natural language code generation",
+      "Project-wide context awareness",
+      "Terminal integration",
+      "Refactoring assistance",
+      "Debugging support",
+      "Multi-language support"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$15/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Pro", "price": "$15/mo"},
+        {"name": "Enterprise", "price": "Custom pricing"}
+      ]
+    },
+    "target_audience": "Software developers, coding students, and development teams seeking AI-enhanced productivity",
+    "seo_keywords": ["Windsurf review", "AI code editor", "Windsurf vs Cursor", "Codeium Windsurf pricing", "AI coding assistant"],
+    "competitors": ["Cursor", "GitHub Copilot", "Replit"],
+    "usp": "Cascade AI agent that thinks ahead and handles complex multi-step coding tasks",
+    "category": "Developer Tools",
+    "affiliate_url": "https://l-nk.in/windsurf",
+    "rating": 4.5
+  },
+  {
+    "slug": "replit",
+    "name": "Replit",
+    "tagline": "Online IDE with AI-powered development capabilities",
+    "description": "Replit is a cloud-based integrated development environment that enables developers to code from any device with a browser. It provides instant deployment, collaborative features, and AI assistance through its Agent feature. The platform supports over 50 programming languages and is popular for rapid prototyping and learning.",
+    "features": [
+      "Browser-based IDE with instant setup",
+      "AI Agent for building apps from prompts",
+      "One-click deployment and hosting",
+      "Real-time collaboration",
+      "Version control integration",
+      "Multi-language support (50+)",
+      "Template library",
+      "Mobile app for coding on the go"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$20/mo",
+      "plans": [
+        {"name": "Starter", "price": "$0/mo"},
+        {"name": "Core", "price": "$20/mo"},
+        {"name": "Pro", "price": "$100/mo"},
+        {"name": "Teams", "price": "$150/user/mo"}
+      ]
+    },
+    "target_audience": "Developers, students, startups, and hobbyists looking for accessible coding environments",
+    "seo_keywords": ["Replit review", "online IDE", "Replit pricing", "AI coding platform", "browser IDE"],
+    "competitors": ["GitHub Codespaces", "CodeSandbox", "Glitch"],
+    "usp": "Instant setup, one-click deployment, and AI Agent that builds complete applications from prompts",
+    "category": "Developer Tools",
+    "affiliate_url": "https://l-nk.in/replit",
+    "rating": 4.4
+  },
+  {
+    "slug": "bolt",
+    "name": "Bolt.new",
+    "tagline": "AI-powered web development in the browser",
+    "description": "Bolt.new is an AI-powered web development platform by StackBlitz that lets developers build, test, and deploy web applications directly in the browser. It combines a full-stack development environment with AI assistance to rapidly create production-ready applications. Developers can describe features in plain language and watch them materialize.",
+    "features": [
+      "Browser-based full-stack development",
+      "AI-assisted coding with natural language",
+      "One-click deployment to production",
+      "Instant sandbox environments",
+      "Frontend and backend support",
+      "Database integration",
+      "Terminal access",
+      "AI debugging and error fixing"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$25/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Pro", "price": "$25/mo"},
+        {"name": "Team", "price": "Custom pricing"}
+      ]
+    },
+    "target_audience": "Web developers, startups, and non-coders wanting to build web applications quickly",
+    "seo_keywords": ["Bolt.new review", "AI web builder", "Bolt.new pricing", "browser IDE", "AI app builder"],
+    "competitors": ["Replit", "CodeSandbox", "Lovable"],
+    "usp": "Full-stack web development in browser with AI that handles complex tasks including backend and database setup",
+    "category": "Developer Tools",
+    "affiliate_url": "https://l-nk.in/bolt",
+    "rating": 4.5
+  },
+  {
+    "slug": "lovable",
+    "name": "Lovable",
+    "tagline": "AI-powered app builder for modern web applications",
+    "description": "Lovable is an AI-powered app builder that transforms natural language descriptions into production-ready web applications. Built on modern frameworks like React and Next.js, it allows users to create full-stack apps without deep technical knowledge. The platform handles frontend, backend, and deployment automatically.",
+    "features": [
+      "Natural language app creation",
+      "Modern tech stack (React, Next.js, Tailwind)",
+      "Full-stack app generation",
+      "Automatic database integration",
+      "GitHub sync and version control",
+      "Design customization options",
+      "Cloud hosting included",
+      "Interactive preview and editing"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$25/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Pro", "price": "$25/mo"},
+        {"name": "Business", "price": "$50/mo"},
+        {"name": "Enterprise", "price": "Custom pricing"}
+      ]
+    },
+    "target_audience": "Founders, non-technical entrepreneurs, and developers wanting to prototype quickly",
+    "seo_keywords": ["Lovable review", "AI app builder", "Lovable pricing", "no code platform", "AI web development"],
+    "competitors": ["Bolt.new", "Framer", "Webflow"],
+    "usp": "Modern tech stack output (React/Next.js) with full-stack capabilities and production-ready code",
+    "category": "Developer Tools",
+    "affiliate_url": "https://l-nk.in/lovable",
+    "rating": 4.4
+  },
+  {
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "tagline": "AI-powered writing assistant for clear communication",
+    "description": "Grammarly is an AI-powered writing assistant that helps users craft clear, error-free, and impactful written communication. It offers real-time grammar, spelling, punctuation, and style suggestions across various platforms and applications. The premium version includes advanced AI features, tone detection, and plagiarism checking.",
+    "features": [
+      "Real-time grammar and spelling checks",
+      "Style and tone suggestions",
+      "Plagiarism detection (Premium)",
+      "AI writing assistance",
+      "Genre-specific writing goals",
+      "Browser and desktop extensions",
+      "Microsoft Office integration",
+      "Team collaboration features"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$12/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Pro", "price": "$12/mo"},
+        {"name": "Business", "price": "$15/user/mo"},
+        {"name": "Enterprise", "price": "Custom pricing"}
+      ]
+    },
+    "target_audience": "Professionals, students, content writers, and teams needing polished written communication",
+    "seo_keywords": ["Grammarly review", "AI writing assistant", "Grammarly pricing", "grammar checker", "writing tool"],
+    "competitors": ["ProWritingAid", "LanguageTool", "QuillBot"],
+    "usp": "Comprehensive writing assistance with real-time corrections across all applications and platforms",
+    "category": "Productivity",
+    "affiliate_url": "https://l-nk.in/grammarly",
+    "rating": 4.8
+  },
+  {
+    "slug": "brevo",
+    "name": "Brevo (Sendinblue)",
+    "tagline": "All-in-one marketing platform for growing businesses",
+    "description": "Brevo is an all-in-one marketing platform (formerly Sendinblue) that provides email marketing, SMS campaigns, live chat, and marketing automation. It helps businesses connect with customers through multiple channels from a single platform. The free plan includes generous features suitable for small businesses getting started.",
+    "features": [
+      "Email marketing campaigns",
+      "SMS marketing automation",
+      "Marketing automation workflows",
+      "Live chat for websites",
+      "Facebook Ads integration",
+      "Landing page builder",
+      "Transactional emails",
+      "Contact management and segmentation"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$9/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Starter", "price": "$9/mo"},
+        {"name": "Business", "price": "$58/mo"},
+        {"name": "Enterprise", "price": "Custom pricing"}
+      ]
+    },
+    "target_audience": "Small businesses, e-commerce stores, and marketers needing multi-channel marketing automation",
+    "seo_keywords": ["Brevo review", "Sendinblue alternative", "email marketing platform", "Brevo pricing", "marketing automation"],
+    "competitors": ["Mailchimp", "ConvertKit", "ActiveCampaign"],
+    "usp": "Free plan with 300 emails/day and SMS capabilities, all-in-one platform without multiple subscriptions",
+    "category": "Marketing",
+    "affiliate_url": "https://l-nk.in/brevo",
+    "rating": 4.5
+  },
+  {
+    "slug": "filmora",
+    "name": "Wondershare Filmora",
+    "tagline": "Easy-to-use video editing software for creators",
+    "description": "Wondershare Filmora is a popular video editing software that combines professional features with an intuitive interface suitable for beginners and intermediate editors. It offers AI-powered tools for rapid editing, a vast library of effects, and cross-platform availability. The software enables creators to produce engaging content for YouTube, social media, and presentations.",
+    "features": [
+      "AI-powered editing tools",
+      "4K video support",
+      "Audio ducking and mixing",
+      "Video effects and transitions library",
+      "Color correction and grading",
+      "Screen recording",
+      "Motion tracking",
+      "Export in multiple formats"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$49.99/yr",
+      "plans": [
+        {"name": "Free Trial", "price": "$0/mo"},
+        {"name": "Annual", "price": "$49.99/yr"},
+        {"name": "Perpetual", "price": "$79.99 (one-time)"}
+      ]
+    },
+    "target_audience": "YouTubers, content creators, social media managers, and beginners in video editing",
+    "seo_keywords": ["Filmora review", "video editing software", "Filmora pricing", "Wondershare Filmora", "YouTube video editor"],
+    "competitors": ["Adobe Premiere Pro", "CapCut", "DaVinci Resolve"],
+    "usp": "Easy learning curve with professional features at an affordable one-time price",
+    "category": "Design",
+    "affiliate_url": "https://l-nk.in/filmora",
+    "rating": 4.6
+  },
+  {
+    "slug": "namecheap",
+    "name": "Namecheap",
+    "tagline": "Domain registration and web hosting provider",
+    "description": "Namecheap is a ICANN-accredited domain registrar and web hosting provider offering competitive prices and reliable services. Founded in 2000, it has grown to manage millions of domains with a focus on customer value. The platform provides domain registration, various hosting solutions, SSL certificates, and productivity apps.",
+    "features": [
+      "Domain registration and transfer",
+      "Shared hosting plans",
+      "VPS and dedicated servers",
+      "WordPress hosting",
+      "SSL certificates",
+      "Email hosting",
+      "Website builder",
+      "Professional DNS management"
+    ],
+    "pricing": {
+      "free": false,
+      "starting_price": "$1.98/mo",
+      "plans": [
+        {"name": "Stellar", "price": "$1.98/mo"},
+        {"name": "Stellar Plus", "price": "$3.48/mo"},
+        {"name": "Stellar Business", "price": "$5.98/mo"}
+      ]
+    },
+    "target_audience": "Individuals, small businesses, and entrepreneurs needing domain names and web hosting",
+    "seo_keywords": ["Namecheap review", "domain registrar", "Namecheap hosting", "cheap domain registration", "web hosting"],
+    "competitors": ["GoDaddy", "Bluehost", "Hostinger"],
+    "usp": "Competitive pricing with no hidden fees and excellent customer support reputation",
+    "category": "Hosting",
+    "affiliate_url": "https://l-nk.in/namecheap",
+    "rating": 4.4
+  },
+  {
+    "slug": "appsumo",
+    "name": "AppSumo",
+    "tagline": "Software deals marketplace for entrepreneurs",
+    "description": "AppSumo is a deals marketplace that offers exclusive lifetime deals on software tools for entrepreneurs and businesses. Founded in 2010, it connects software companies with buyers through limited-time offers. Users can access productivity, marketing, and business tools at significantly reduced prices compared to traditional subscriptions.",
+    "features": [
+      "Lifetime deal offers on software",
+      "Daily deals newsletter",
+      "Product reviews and ratings",
+      "Code redemption system",
+      "Deal alerts and notifications",
+      "Sumo stores for creators",
+      "Community discussions",
+      "Money-back guarantee"
+    ],
+    "pricing": {
+      "free": false,
+      "starting_price": "$0 (deals vary)",
+      "plans": [
+        {"name": "Free Membership", "price": "$0/mo"},
+        {"name": "AppSumo Plus", "price": "$49/yr"}
+      ]
+    },
+    "target_audience": "Entrepreneurs, small business owners, and startup founders looking for affordable software tools",
+    "seo_keywords": ["AppSumo review", "lifetime deals", "software deals", "AppSumo pricing", "deals marketplace"],
+    "competitors": ["PitchGround", "SaaS Mantra", "DealFuel"],
+    "usp": "Exclusive lifetime deals that convert expensive subscriptions into affordable one-time payments",
+    "category": "Marketing",
+    "affiliate_url": "https://l-nk.in/appsumo",
+    "rating": 4.5
+  },
+  {
+    "slug": "minimax",
+    "name": "MiniMax AI",
+    "tagline": "AI video generation platform for creators",
+    "description": "MiniMax AI (Hailuo AI) is an AI video generation platform that creates high-quality videos from text and image prompts. It offers state-of-the-art video synthesis with customizable styles and durations. The platform is known for its realistic motion and cinematic quality, making it popular among content creators and filmmakers.",
+    "features": [
+      "Text-to-video generation",
+      "Image-to-video conversion",
+      "Multiple video styles and moods",
+      "High-resolution output (up to 1080p)",
+      "Video-to-video transformation",
+      "AI voiceover integration",
+      "API access for developers",
+      "Fast generation processing"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$9.99/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Standard", "price": "$9.99/mo"},
+        {"name": "Pro", "price": "$49.99/mo"},
+        {"name": "Unlimited", "price": "$94.99/mo"}
+      ]
+    },
+    "target_audience": "Content creators, filmmakers, marketers, and social media managers needing AI video generation",
+    "seo_keywords": ["MiniMax AI review", "AI video generator", "Hailuo AI", "MiniMax pricing", "text to video AI"],
+    "competitors": ["Runway Gen-3", "Pika Labs", "Kling AI"],
+    "usp": "High-quality video output with realistic motion and cinematic aesthetics at competitive pricing",
+    "category": "AI Tools",
+    "affiliate_url": "https://magik.live/minimax",
+    "rating": 4.3
+  },
+  {
+    "slug": "kling",
+    "name": "Kling AI",
+    "tagline": "Professional AI video generation by Kuaishou",
+    "description": "Kling AI is a professional-grade AI video generation platform developed by Kuaishou, the Chinese tech company behind Kwai. It produces high-quality videos with natural motion and realistic physics from text prompts. The platform supports various aspect ratios and video styles suitable for commercial and creative applications.",
+    "features": [
+      "Professional video generation",
+      "Multiple aspect ratios",
+      "Standard and Professional modes",
+      "Motion brush for animation",
+      "Kling 3.0 advanced engine",
+      "Lip sync capabilities",
+      "Camera control options",
+      "Consistent character generation"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$0 (credits system)",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Standard", "price": "$9.99/mo"},
+        {"name": "Pro", "price": "$59.99/mo"},
+        {"name": "Ultra", "price": "$99.99/mo"}
+      ]
+    },
+    "target_audience": "Professional video creators, marketers, and enterprises needing high-quality AI video content",
+    "seo_keywords": ["Kling AI review", "AI video generator", "Kling pricing", "Kuaishou AI video", "professional AI video"],
+    "competitors": ["Runway", "Sora", "Pika Labs"],
+    "usp": "Professional-grade output from Chinese tech giant with realistic motion and professional features",
+    "category": "AI Tools",
+    "affiliate_url": "https://l-nk.in/kling",
+    "rating": 4.4
+  },
+  {
+    "slug": "gamma",
+    "name": "Gamma App",
+    "tagline": "AI-powered presentation and content creation",
+    "description": "Gamma is an AI-powered platform for creating stunning presentations, websites, and documents from simple text inputs. It combines design automation with AI to help users produce professional-quality content without design skills. The platform offers beautiful templates, easy customization, and seamless sharing options.",
+    "features": [
+      "AI presentation generation",
+      "One-click design styling",
+      "Website building capabilities",
+      "Document creation mode",
+      "Embedded multimedia support",
+      "Collaborative editing",
+      "Analytics dashboard",
+      "Custom domain support"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$9/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Plus", "price": "$9/mo"},
+        {"name": "Pro", "price": "$15/mo"},
+        {"name": "Enterprise", "price": "Custom pricing"}
+      ]
+    },
+    "target_audience": "Business professionals, marketers, educators, and content creators needing polished presentations",
+    "seo_keywords": ["Gamma app review", "AI presentation maker", "Gamma pricing", "AI slide creator", "presentation software"],
+    "competitors": ["Canva", "Beautiful.ai", "Pitch.com"],
+    "usp": "AI-driven design that creates polished presentations without requiring design expertise",
+    "category": "Productivity",
+    "affiliate_url": "https://l-nk.in/gamma",
+    "rating": 4.6
+  },
+  {
+    "slug": "mindvalley",
+    "name": "Mindvalley",
+    "tagline": "Personal development and wellness education platform",
+    "description": "Mindvalley is a personal development platform offering courses and programs for growth in areas like health, spirituality, productivity, and relationships. Founded by Vishen Lakhiani, it features quests designed for busy people with daily 20-minute lessons. The platform hosts world-class teachers and provides a comprehensive membership for holistic growth.",
+    "features": [
+      "Expert-led quests and programs",
+      "Daily 20-minute lessons",
+      "Categories: health, mind, spirituality",
+      "Mobile app for learning",
+      "Certificate of completion",
+      "Community access",
+      "Masterclass workshops",
+      "Various payment options"
+    ],
+    "pricing": {
+      "free": false,
+      "starting_price": "$16.58/mo",
+      "plans": [
+        {"name": "Annual Membership", "price": "$199/yr"},
+        {"name": "Monthly Membership", "price": "$99/mo"}
+      ]
+    },
+    "target_audience": "Self-improvement seekers, professionals, and wellness enthusiasts seeking holistic personal growth",
+    "seo_keywords": ["Mindvalley review", "personal development courses", "Mindvalley pricing", "online learning", "wellness education"],
+    "competitors": ["MasterClass", "Skillshare", "Coursera"],
+    "usp": "World-class teachers and quests designed to fit busy lifestyles with 20-minute daily sessions",
+    "category": "Education",
+    "affiliate_url": "https://l-nk.in/mindvalley",
+    "rating": 4.5
+  },
+  {
+    "slug": "skool",
+    "name": "Skool",
+    "tagline": "Community platform for creators and educators",
+    "description": "Skool is a community platform designed for creators, coaches, and educators to build engaged communities around their expertise. Founded by Dan Nicholson (creator of Leadpages), it combines course delivery with community features. The platform emphasizes simplicity and effectiveness for building profitable communities.",
+    "features": [
+      "Community building tools",
+      "Course and content delivery",
+      "Live class broadcasting",
+      "Leaderboard and gamification",
+      "Direct messaging",
+      "Calendar and scheduling",
+      "Analytics dashboard",
+      "Payment processing"
+    ],
+    "pricing": {
+      "free": false,
+      "starting_price": "$9/mo",
+      "plans": [
+        {"name": "Community", "price": "$9/mo"},
+        {"name": "Pro", "price": "$99/mo"}
+      ]
+    },
+    "target_audience": "Course creators, coaches, community builders, and entrepreneurs building online communities",
+    "seo_keywords": ["Skool review", "community platform", "Skool pricing", "online community", "course platform"],
+    "competitors": ["Thinkific", "Kajabi", "Circle"],
+    "usp": "Simple, effective platform purpose-built for community monetization with minimal features that work",
+    "category": "Education",
+    "affiliate_url": "https://l-nk.in/skool",
+    "rating": 4.3
+  },
+  {
+    "slug": "railway",
+    "name": "Railway",
+    "tagline": "Modern cloud hosting platform for developers",
+    "description": "Railway is a modern cloud platform that simplifies deploying and hosting applications in the cloud. It offers a developer-friendly experience with automatic deployments from GitHub, managed databases, and usage-based pricing. Railway eliminates the complexity of infrastructure management while providing powerful features for production applications.",
+    "features": [
+      "One-click deployments from GitHub",
+      "Managed databases (PostgreSQL, MySQL, Redis)",
+      "Object storage",
+      "SSL certificates automatic",
+      "Custom domains with DNS",
+      "Environment variables management",
+      "Load balancing",
+      "Usage-based pricing"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$0 (usage-based)",
+      "plans": [
+        {"name": "Starter", "price": "$0/mo"},
+        {"name": "Pro", "price": "$20/mo base + usage"},
+        {"name": "Team", "price": "Custom pricing"}
+      ]
+    },
+    "target_audience": "Developers, startups, and small teams wanting easy cloud deployment without DevOps complexity",
+    "seo_keywords": ["Railway review", "cloud hosting", "Railway pricing", "deploy app", "railway alternative"],
+    "competitors": ["Render", "Fly.io", "Vercel"],
+    "usp": "Developer experience first with the fastest path from code to production without infrastructure headaches",
+    "category": "Hosting",
+    "affiliate_url": "https://l-nk.in/railway",
+    "rating": 4.6
+  },
+  {
+    "slug": "warp",
+    "name": "Warp Terminal",
+    "tagline": "AI-powered terminal for modern developers",
+    "description": "Warp is a modern, AI-powered terminal that reimagines the command-line experience for developers. It features a gorgeous interface, AI assistance built directly into the workflow, and intelligent autocomplete. Warp aims to make command-line work faster and more enjoyable with innovative features like block selection and workflow commands.",
+    "features": [
+      "Beautiful, modern interface",
+      "AI autocomplete and assistance",
+      "Block selection and editing",
+      "Workflow commands",
+      "Command history with search",
+      "Multiple pane support",
+      "Theme customization",
+      "SSH and remote sessions"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$20/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Build", "price": "$20/mo"},
+        {"name": "Team", "price": "Custom pricing"}
+      ]
+    },
+    "target_audience": "Developers, DevOps engineers, and power users who spend significant time in the terminal",
+    "seo_keywords": ["Warp terminal review", "AI terminal", "Warp pricing", "modern terminal", "terminal replacement"],
+    "competitors": ["iTerm2", "Windows Terminal", "Kitty"],
+    "usp": "Most innovative terminal in decades with AI assistance and modern UX built for productivity",
+    "category": "Developer Tools",
+    "affiliate_url": "https://l-nk.in/warp",
+    "rating": 4.7
+  },
+  {
+    "slug": "getresponse",
+    "name": "GetResponse",
+    "tagline": "Email marketing and automation platform",
+    "description": "GetResponse is an email marketing platform offering campaign management, marketing automation, and landing page creation. It helps businesses of all sizes build relationships with subscribers through personalized communication. The platform combines ease of use with powerful features for lead generation and conversion optimization.",
+    "features": [
+      "Email campaign management",
+      "Marketing automation workflows",
+      "Landing page builder",
+      "Webinar hosting",
+      "Lead generation forms",
+      "A/B testing",
+      "Analytics and reporting",
+      "E-commerce integration"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$13.30/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Email Marketing", "price": "$13.30/mo"},
+        {"name": "Marketing Automation", "price": "$32.30/mo"},
+        {"name": "E-commerce", "price": "$58/mo"},
+        {"name": "MAX", "price": "$99/mo"}
+      ]
+    },
+    "target_audience": "Small businesses, e-commerce stores, and marketers needing email marketing and automation",
+    "seo_keywords": ["GetResponse review", "email marketing platform", "GetResponse pricing", "marketing automation", "email builder"],
+    "competitors": ["Mailchimp", "ConvertKit", "Brevo"],
+    "usp": "All-in-one platform including email, landing pages, webinars, and marketing automation without high price tags",
+    "category": "Marketing",
+    "affiliate_url": "https://l-nk.in/getresponse",
+    "rating": 4.4
+  },
+  {
+    "slug": "make",
+    "name": "Make (Integromat)",
+    "tagline": "Visual automation and integration platform",
+    "description": "Make (formerly Integromat) is a visual automation platform that connects apps and automates workflows without coding. It allows users to build complex scenarios connecting over 3,000 apps through an intuitive drag-and-drop interface. The platform supports both simple automations and sophisticated AI-powered workflows for enterprises.",
+    "features": [
+      "Visual workflow builder",
+      "3,000+ app integrations",
+      "AI-powered automation",
+      "Data transformation tools",
+      "Real-time monitoring",
+      "Custom webhooks",
+      "Error handling and debugging",
+      "Team collaboration"
+    ],
+    "pricing": {
+      "free": true,
+      "starting_price": "$9/mo",
+      "plans": [
+        {"name": "Free", "price": "$0/mo"},
+        {"name": "Core", "price": "$9/mo"},
+        {"name": "Pro", "price": "$29/mo"},
+        {"name": "Teams", "price": "$59/mo"},
+        {"name": "Enterprise", "price": "Custom pricing"}
+      ]
+    },
+    "target_audience": "Businesses, marketers, and developers needing to automate workflows and integrate applications",
+    "seo_keywords": ["Make (Integromat) review", "workflow automation", "Make pricing", "no-code automation", "app integration"],
+    "competitors": ["Zapier", "n8n", "Workato"],
+    "usp": "Powerful visual automation with 3,000+ integrations at competitive pricing with generous free tier",
+    "category": "Productivity",
+    "affiliate_url": "https://l-nk.in/make",
+    "rating": 4.7
+  }
+]

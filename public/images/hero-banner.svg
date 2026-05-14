@@ -1,0 +1,17 @@
+<svg width="1280" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4338ca"/>
+      <stop offset="50%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="400" fill="url(#hbg)"/>
+  <circle cx="200" cy="200" r="250" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="1000" cy="150" r="200" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="1100" cy="350" r="100" fill="rgba(255,255,255,0.06)"/>
+  <text x="640" y="160" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="56" font-weight="800" fill="white">Shopmatic</text>
+  <text x="640" y="210" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.8)">Best Tools &amp; Deals for Smart Professionals</text>
+  <rect x="520" y="250" width="240" height="48" rx="24" fill="white"/>
+  <text x="640" y="281" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#4338ca">Explore Top Products →</text>
+</svg>
