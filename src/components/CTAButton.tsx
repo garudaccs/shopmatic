@@ -20,10 +20,10 @@ export default function CTAButton({ text, url, variant = 'primary', className = 
   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-200 cursor-pointer';
   
   const variants = {
-    primary: 'bg-[#2563eb] text-white hover:bg-[#1d4ed8] px-6 py-3 shadow-sm hover:shadow-md hover:shadow-[#2563eb]/20 hover:-translate-y-0.5',
-    secondary: 'bg-white text-[#2563eb] border-2 border-[#2563eb] hover:bg-blue-50 px-6 py-3 hover:-translate-y-0.5',
-    large: 'bg-[#2563eb] text-white hover:bg-[#1d4ed8] px-10 py-4 text-lg shadow-lg hover:shadow-xl hover:shadow-[#2563eb]/20 hover:-translate-y-1',
-    'best-deal': 'bg-gradient-to-r from-[#059669] to-[#10b981] text-white hover:from-[#047857] hover:to-[#059669] px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:shadow-emerald-500/20 hover:-translate-y-1 animate-pulse-subtle',
+    primary: 'bg-orange-500 text-white hover:bg-orange-600 px-6 py-3 shadow-sm hover:shadow-md hover:shadow-orange-500/20 hover:-translate-y-0.5',
+    secondary: 'bg-white text-gray-700 border-2 border-gray-300 hover:border-orange-400 hover:text-orange-600 px-6 py-3 hover:-translate-y-0.5',
+    large: 'bg-orange-500 text-white hover:bg-orange-600 px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:shadow-orange-500/20 hover:-translate-y-1',
+    'best-deal': 'bg-gradient-to-r from-orange-500 to-amber-500 text-white hover:from-orange-600 hover:to-amber-600 px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:shadow-orange-500/20 hover:-translate-y-1',
   };
 
   return (
@@ -36,7 +36,7 @@ export default function CTAButton({ text, url, variant = 'primary', className = 
     >
       {text}
       <svg 
-        className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" 
+        className="w-5 h-5 ml-2" 
         fill="none" 
         stroke="currentColor" 
         viewBox="0 0 24 24"
