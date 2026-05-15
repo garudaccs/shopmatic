@@ -139,8 +139,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   const hasMarkdownContent = markdownContent.length > 0;
 
-  // Split markdown into sections by ## headers for interspersed layout
+  // Split markdown into sections by ## headers for layout
   const sections = hasMarkdownContent ? markdownContent.split(/(?=^## )/m).filter(Boolean) : [];
+  const totalSections = sections.length;
 
   // JSON-LD Structured Data
   const jsonLd = {
@@ -296,47 +297,30 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
           {hasMarkdownContent ? (
             <div className="space-y-0">
-              {/* Intro section (first section before any ## header) */}
               {sections.map((section, index) => {
                 const sectionHtml = markdownToHtml(section);
-                const isEven = index % 2 === 0;
-                const showImage = index > 0 && index < sections.length - 1 && index % 3 === 1;
-                const showMidCta = index > 0 && index % 4 === 2 && index < sections.length - 1;
+                const isMidContent = index > 0 && index < totalSections - 1;
+                // Show a benefit highlight box after every 2nd content section
+                const showHighlight = isMidContent && index % 2 === 0;
 
                 return (
                   <div key={index}>
-                    {/* Content block with optional side image */}
-                    {showImage ? (
-                      <div className="flex flex-col md:flex-row gap-8 mb-12 items-center">
-                        <div className={`flex-1 ${!isEven ? 'order-2' : ''}`}>
-                          <div
-                            className="product-review-content prose prose-lg max-w-none prose-headings:scroll-mt-20"
-                            dangerouslySetInnerHTML={{ __html: sectionHtml }}
-                          />
-                        </div>
-                        <div className={`w-full md:w-2/5 ${!isEven ? 'order-1' : ''}`}>
-                          <div className="rounded-xl overflow-hidden shadow-md bg-gray-50">
-                            <img
-                              src={product.image}
-                              alt={`${product.title} - ${product.title} feature`}
-                              className="w-full h-auto object-cover"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    ) : (
-                      <div
-                        className="product-review-content prose prose-lg max-w-none prose-headings:scroll-mt-20 mb-10"
-                        dangerouslySetInnerHTML={{ __html: sectionHtml }}
-                      />
-                    )}
+                    {/* Content block */}
+                    <div
+                      className="product-review-content prose prose-lg max-w-none prose-headings:scroll-mt-20 mb-8"
+                      dangerouslySetInnerHTML={{ __html: sectionHtml }}
+                    />
 
-                    {/* Mid-content CTA */}
-                    {showMidCta && (
-                      <div className="my-10 bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    {/* Benefit highlight between sections */}
+                    {showHighlight && (
+                      <div className="my-8 bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div>
                           <p className="text-gray-800 font-semibold text-lg">Ready to try {product.title}?</p>
-                          <p className="text-gray-500 text-sm">Get the best deal through our verified affiliate link.</p>
+                          <p className="text-gray-500 text-sm">
+                            {product.pricingType === 'free' 
+                              ? 'Start for free today.' 
+                              : 'Get the best deal through our verified link.'}
+                          </p>
                         </div>
                         <a
                           href={product.affiliate_url}
