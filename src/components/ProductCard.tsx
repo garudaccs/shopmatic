@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ProductFull } from '@/lib/types';
+import EditorPickBadge from './EditorPickBadge';
 
 interface ProductCardProps {
   product: ProductFull;
@@ -46,6 +47,13 @@ export default function ProductCard({ product, featured = false }: ProductCardPr
           </span>
         )}
         
+        {/* Editor's Pick Badge */}
+        {product.editorPick && (
+          <div className="absolute bottom-3 right-3">
+            <EditorPickBadge variant="compact" />
+          </div>
+        )}
+
         {/* Verified Badge */}
         <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm">
           <svg className="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">

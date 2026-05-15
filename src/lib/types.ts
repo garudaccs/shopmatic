@@ -28,6 +28,8 @@ export interface ProductFull {
   relatedProducts: string[];
   pricingPlans?: { name: string; price: string }[];
   seoKeywords?: string[];
+  editorPick?: boolean;
+  tags?: string[];
 }
 
 export interface Category {

@@ -276,6 +276,8 @@ export function getAllProducts(): ProductFull[] {
         relatedProducts: getRelatedProducts(slug),
         pricingPlans: research.pricing.plans || [],
         seoKeywords: research.seo_keywords || [],
+        editorPick: (research.rating || 4.0) >= 4.5,
+        tags: research.seo_keywords?.slice(0, 5) || [],
       };
     }
     
@@ -306,6 +308,8 @@ export function getAllProducts(): ProductFull[] {
       relatedProducts: getRelatedProducts(slug),
       pricingPlans: [],
       seoKeywords: [],
+      editorPick: false,
+      tags: [],
     };
   });
 }
@@ -354,6 +358,14 @@ export function getFeaturedProducts(limit: number = 8): ProductFull[] {
   const products = getAllProducts();
   return products
     .sort((a, b) => b.rating - a.rating)
+    .slice(0, limit);
+}
+
+// Get editor's picks (top-rated products)
+export function getEditorPicks(limit: number = 8): ProductFull[] {
+  const products = getAllProducts();
+  return products
+    .filter(p => p.editorPick)
     .slice(0, limit);
 }
 
