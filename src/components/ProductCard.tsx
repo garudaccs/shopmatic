@@ -24,10 +24,10 @@ export default function ProductCard({ product, featured = false }: ProductCardPr
   return (
     <Link
       href={`/products/${product.slug}`}
-      className={`group block bg-white rounded-2xl border border-slate-200/80 overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 hover:border-[#2563eb]/30 ${featured ? 'ring-2 ring-[#2563eb]/20' : ''}`}
+      className={`group block bg-white rounded-2xl border border-slate-200/80 overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 hover:border-[#2563eb]/30 flex flex-col h-full ${featured ? 'ring-2 ring-[#2563eb]/20' : ''}`}
     >
       {/* Image */}
-      <div className="relative h-48 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
+      <div className="relative h-44 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden flex-shrink-0">
         <img
           src={product.image}
           alt={product.title}
@@ -40,33 +40,18 @@ export default function ProductCard({ product, featured = false }: ProductCardPr
           {badge.label}
         </span>
         
-        {/* Tagline Badge */}
-        {product.tagline && (
-          <span className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-slate-700 text-xs font-medium px-2.5 py-1 rounded-lg shadow-sm">
-            {product.tagline.length > 25 ? `${product.tagline.substring(0, 25)}...` : product.tagline}
-          </span>
-        )}
-        
         {/* Editor's Pick Badge */}
         {product.editorPick && (
-          <div className="absolute bottom-3 right-3">
+          <div className="absolute top-3 right-3">
             <EditorPickBadge variant="compact" />
           </div>
         )}
-
-        {/* Verified Badge */}
-        <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm">
-          <svg className="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-          </svg>
-          <span className="text-xs font-medium text-slate-700">Verified</span>
-        </div>
       </div>
 
-      {/* Content */}
-      <div className="p-5">
+      {/* Content - flex-1 pushes footer to bottom */}
+      <div className="p-5 flex flex-col flex-1">
         {/* Category & Rating Row */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-2">
           <span className="inline-flex items-center px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md border border-slate-200">
             {product.category}
           </span>
@@ -82,12 +67,12 @@ export default function ProductCard({ product, featured = false }: ProductCardPr
               {hasHalfStar && (
                 <svg className="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20">
                   <defs>
-                    <linearGradient id="halfStar" x1="0" x2="1" y1="0" y2="0">
+                    <linearGradient id={`halfStar-${product.slug}`} x1="0" x2="1" y1="0" y2="0">
                       <stop offset="50%" stopColor="currentColor" />
                       <stop offset="50%" stopColor="#e2e8f0" />
                     </linearGradient>
                   </defs>
-                  <path fill="url(#halfStar)" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  <path fill={`url(#halfStar-${product.slug})`} d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                 </svg>
               )}
               {[...Array(emptyStars)].map((_, i) => (
@@ -97,31 +82,30 @@ export default function ProductCard({ product, featured = false }: ProductCardPr
               ))}
             </div>
             <span className="text-sm font-bold text-slate-800">{product.rating.toFixed(1)}</span>
-            <span className="text-xs text-slate-400">({product.reviewCount})</span>
           </div>
         </div>
 
-        {/* Product Title */}
-        <h3 className="font-bold text-slate-800 mb-2 line-clamp-1 group-hover:text-[#2563eb] transition-colors duration-200 text-lg">
+        {/* Product Title - fixed 2 lines */}
+        <h3 className="font-bold text-slate-800 mb-2 group-hover:text-[#2563eb] transition-colors duration-200 text-base leading-snug" style={{display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden',minHeight:'2.5rem'}}>
           {product.title}
         </h3>
         
-        {/* Product Description */}
-        <p className="text-sm text-slate-500 mb-4 line-clamp-2 leading-relaxed">
+        {/* Product Description - fixed 2 lines */}
+        <p className="text-sm text-slate-500 mb-4 leading-relaxed flex-1" style={{display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden',minHeight:'2.5rem'}}>
           {product.description}
         </p>
 
-        {/* Price & CTA */}
-        <div className="flex items-center justify-between pt-3 border-t border-slate-100">
+        {/* Price & CTA - always at bottom */}
+        <div className="flex items-center justify-between pt-3 border-t border-slate-100 mt-auto">
           <div className="flex flex-col">
             <span className="text-xs text-slate-400">Starting from</span>
-            <span className="text-lg font-bold text-slate-800">{product.price}</span>
+            <span className="text-base font-bold text-slate-800 whitespace-nowrap">{product.price}</span>
           </div>
           
-          <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#2563eb] text-white text-sm font-semibold rounded-xl group-hover:bg-[#1d4ed8] transition-all duration-200 shadow-sm group-hover:shadow-md group-hover:shadow-[#2563eb]/20">
-            View Details
-            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#2563eb] text-white text-sm font-semibold rounded-xl group-hover:bg-[#1d4ed8] transition-all duration-200 shadow-sm group-hover:shadow-md group-hover:shadow-[#2563eb]/20 whitespace-nowrap">
+            Details
+            <svg className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </span>
         </div>
