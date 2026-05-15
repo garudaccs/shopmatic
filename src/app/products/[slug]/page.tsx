@@ -136,7 +136,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
   
   try {
     if (fs.existsSync(markdownPath)) {
-      markdownContent = fs.readFileSync(markdownPath, 'utf-8');
+      let raw = fs.readFileSync(markdownPath, 'utf-8');
+      // Strip YAML frontmatter (--- ... ---)
+      markdownContent = raw.replace(/^---[\s\S]*?---\n*/, '').trim();
     }
   } catch (e) {
     // Markdown file not found, will generate content
