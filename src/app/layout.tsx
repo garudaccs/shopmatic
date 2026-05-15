@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shopmatic.com",
+    url: "https://shopmatic.cc",
     siteName: "Shopmatic",
     title: "Shopmatic - Discover the Best Tools & Deals",
     description: "Your trusted source for honest product reviews and exclusive deals.",
@@ -37,6 +38,9 @@ export const metadata: Metadata = {
   },
 };
 
+// Google Analytics 4 Measurement ID (placeholder - replace with actual ID)
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,26 +49,34 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        {/* Google Analytics placeholder */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID');
-            `,
-          }}
-        />
+        {/* Preconnect to Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="min-h-screen flex flex-col bg-white antialiased">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        
+        {/* Google Analytics 4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="ga-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
       </body>
     </html>
   );
