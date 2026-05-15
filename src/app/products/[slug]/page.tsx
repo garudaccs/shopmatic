@@ -199,9 +199,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </nav>
 
       {/* Product Hero */}
-      <section className="py-12">
+      <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Product Image */}
             <div className="relative">
               <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden">
@@ -221,11 +221,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="mb-4">
                 <span className="text-sm text-gray-500 font-medium">{product.category}</span>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 {product.title}
               </h1>
               {product.tagline && (
-                <p className="text-lg text-indigo-600 font-medium mb-4">{product.tagline}</p>
+                <p className="text-xl md:text-2xl text-indigo-600 font-medium mb-6 leading-relaxed">{product.tagline}</p>
               )}
               
               {/* Rating */}
@@ -303,21 +303,21 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </section>
 
       {/* Full Review Content (from markdown or generated) */}
-      <section className="py-12 border-t border-gray-100">
+      <section className="py-16 lg:py-20 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {hasMarkdownContent ? (
             <div className="prose prose-lg max-w-none">
               <div 
-                className="product-review-content"
+                className="product-review-content prose-headings:scroll-mt-20 prose-ul:my-4 prose-li:my-1"
                 dangerouslySetInnerHTML={{ __html: markdownToHtml(markdownContent) }}
               />
             </div>
           ) : (
             <>
               {/* Features Section */}
-              <div className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
-                <div className="grid md:grid-cols-2 gap-4">
+              <div className="mb-16">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Key Features</h2>
+                <div className="grid md:grid-cols-2 gap-5">
                   {product.features.map((feature, index) => (
                     <div key={index} className="flex items-start bg-gray-50 p-4 rounded-lg">
                       <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -330,8 +330,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
 
               {/* Pricing Section */}
-              <div className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
+              <div className="mb-16">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Pricing</h2>
                 <div className="bg-indigo-50 rounded-xl p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -346,7 +346,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
 
               {/* Pros and Cons */}
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="grid md:grid-cols-2 gap-8 mb-16">
                 <div className="bg-green-50 rounded-xl p-6 border border-green-100">
                   <h3 className="text-xl font-bold text-green-800 mb-4 flex items-center">
                     <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -382,8 +382,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
 
               {/* FAQ Section */}
-              <div className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+              <div className="mb-16">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
                 <FAQAccordion items={product.faqs} />
               </div>
             </>
@@ -392,7 +392,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </section>
 
       {/* Final CTA */}
-      <section className="py-12 bg-indigo-600">
+      <section className="py-16 md:py-20 lg:py-24 bg-indigo-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-indigo-100 mb-8 max-w-2xl mx-auto">
@@ -409,9 +409,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (
-        <section className="py-12">
+        <section className="py-16 lg:py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Products</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Related Products</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedProducts.map((relatedProduct) => (
                 relatedProduct && (
