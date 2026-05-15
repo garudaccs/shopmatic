@@ -4,6 +4,19 @@ import { getCategoryBySlug, getProductsByCategory } from '@/lib/products';
 import ProductCard from '@/components/ProductCard';
 import Link from 'next/link';
 
+export function generateStaticParams() {
+  return [
+    { category: "AI Tools" },
+    { category: "Developer Tools" },
+    { category: "Marketing" },
+    { category: "Design" },
+    { category: "Education" },
+    { category: "Hosting" },
+    { category: "Productivity" },
+    { category: "General" },
+  ];
+}
+
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
 }
@@ -138,4 +151,5 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </section>
     </div>
   );
+
 }
