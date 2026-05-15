@@ -206,42 +206,40 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {featuredProducts.slice(0, 4).map((product) => (
               <Link
                 key={product.slug}
                 href={`/products/${product.slug}`}
-                className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-200"
+                className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-200 flex h-48"
               >
-                <div className="flex">
-                  <div className="w-1/3 bg-gray-100">
-                    <img
-                      src={product.image}
-                      alt={product.title}
-                      className="w-full h-full object-cover"
-                    />
+                <div className="w-1/3 bg-gray-100 flex-shrink-0">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-2/3 p-5 flex flex-col">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded">
+                      {product.category}
+                    </span>
+                    <div className="flex items-center text-yellow-400">
+                      <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                      <span className="text-sm font-medium text-gray-700 ml-1">{product.rating.toFixed(1)}</span>
+                    </div>
                   </div>
-                  <div className="w-2/3 p-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded">
-                        {product.category}
-                      </span>
-                      <div className="flex items-center text-yellow-400">
-                        <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                        </svg>
-                        <span className="text-sm font-medium text-gray-700 ml-1">{product.rating.toFixed(1)}</span>
-                      </div>
-                    </div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-indigo-600 mb-2">
-                      {product.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 line-clamp-2">
-                      {product.description.substring(0, 100)}...
-                    </p>
-                    <div className="mt-3 text-sm font-medium text-indigo-600 group-hover:text-indigo-700">
-                      Read Review →
-                    </div>
+                  <h3 className="font-semibold text-gray-900 group-hover:text-indigo-600 mb-1 whitespace-nowrap truncate">
+                    {product.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 flex-1" style={{display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden'}}>
+                    {product.description}
+                  </p>
+                  <div className="mt-2 text-sm font-medium text-indigo-600 group-hover:text-indigo-700">
+                    Read Review &rarr;
                   </div>
                 </div>
               </Link>
